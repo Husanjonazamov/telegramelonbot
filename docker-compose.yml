@@ -1,0 +1,11 @@
+version: '3.11'
+
+services:
+  bot:
+    build: 
+      context: .
+    volumes:
+      - ./:/code
+
+volumes:
+  sqlite_data: 

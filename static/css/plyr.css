@@ -1,0 +1,72 @@
+/* Plyr CSS */
+.plyr {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.plyr__video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+  overflow: hidden;
+}
+
+.plyr__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+}
+
+.plyr__controls .plyr__control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 5px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.plyr__controls .plyr__control:hover,
+.plyr__controls .plyr__control:focus {
+  color: #00d1b2;
+}
+
+.plyr__progress {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.plyr__progress input[type="range"] {
+  width: 100%;
+  background: none;
+  cursor: pointer;
+}
+
+.plyr__progress input[type="range"]::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  background: #00d1b2;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.plyr__progress input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #00d1b2;
+  cursor: pointer;
+}

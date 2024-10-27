@@ -1,0 +1,124 @@
+body {
+  background: rgb(207,238,238);
+  background: radial-gradient(circle, rgba(207,238,238,1) 0%, rgba(252,252,252,1) 100%);
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  color: white;
+  transition: transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card h2 {
+  font-size: 24px;
+}
+
+.card i.icon {
+  font-size: 24px;
+}
+
+.card-bar {
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.2);
+  height: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card-bar .progress {
+  width: 70%; /* Adjust this percentage as needed */
+  height: 100%;
+  background: white;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.green {
+  background: linear-gradient(135deg, #32cd32, #7fff00);
+}
+
+.blue {
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+}
+
+.orange {
+  background: linear-gradient(135deg, #ffa500, #ff6347);
+}
+
+.red {
+  background: linear-gradient(135deg, #ff6b81, #ff85a1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .card {
+      width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 100%;
+      max-width: 300px;
+  }
+}

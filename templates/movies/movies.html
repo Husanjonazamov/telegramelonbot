@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<div class="container">
+  <h1>Movies</h1>
+  {% for movie in movies %}
+  <div class="movie">
+      <h2>{{ movie.title }}</h2>
+      <video controls class="js-player">
+          <source src="{{ movie.movie_file.url }}" type="video/mp4">
+          Sizning brauzeringiz video teglari qo'llab-quvvatlamaydi.
+      </video>
+      <div class="movie-details">
+          <p><strong>Genre:</strong> {{ movie.genre }}</p>
+          <p><strong>Release Year:</strong> {{ movie.release_year }}</p>
+          <p><strong>Size:</strong> {{ movie.size }}</p>
+          <p><strong>Code:</strong> {{ movie.code }}</p>
+          <a href="{{ movie.movie_file.url }}" download>Download Movie</a>
+      </div>
+  </div>
+  {% endfor %}
+</div>
