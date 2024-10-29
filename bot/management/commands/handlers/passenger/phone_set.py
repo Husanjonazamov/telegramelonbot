@@ -7,6 +7,7 @@ from aiogram.dispatcher import FSMContext
 from bot.management.commands.loader import dp
 from bot.management.commands.utils import texts, buttons
 from bot.management.commands.state import Passenger
+from bot.management.commands.handlers.passenger.count_set import passerger_count
 
 # add import
 from asyncio import create_task
@@ -55,8 +56,7 @@ async def passanger_phone_task(message: Message, state: FSMContext):
 @dp.message_handler(content_types=[ContentType.TEXT, ContentType.CONTACT], state=Passenger.phone)
 async def passanger_phone(message: Message, state: FSMContext):
     if message.text in [buttons.BACK]:
-        await message.answer(texts.PASSENGER_LOCATION_MESSAGE, reply_markup=buttons.LOCATION)
-        await Passenger.location.set()    
+        await passerger_count(message, state)
     else:
         await create_task(passanger_phone_task(message, state))
     

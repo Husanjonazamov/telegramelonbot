@@ -7,16 +7,11 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from bot.management.commands.utils.env import BOT_TOKEN
 import logging
 
-
-
-
 logging.basicConfig(level=logging.INFO)
 
 storage = MemoryStorage()
 
-
 BOT_TOKEN = BOT_TOKEN
 
 bot = Bot(token=BOT_TOKEN, parse_mode='html')
-
 dp = Dispatcher(bot, storage=storage)
