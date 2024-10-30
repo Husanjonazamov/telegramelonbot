@@ -18,10 +18,10 @@ async def mail_handler_task(message: Message, state: FSMContext):
     Foydalanuvchilar pochta sini yuboradigan funksiya
     """
     
-    
     locations = Location.objects.all()
     
     location_buttons = [[KeyboardButton(location.name)] for location in locations] 
+    location_buttons.append([KeyboardButton(text=buttons.BASE_BACK)])
 
     location_button = ReplyKeyboardMarkup(
         keyboard=location_buttons,

@@ -29,7 +29,11 @@ async def process_order_acceptance_task(callback_query: CallbackQuery, state: FS
         print(f"Xatolik yuz berdi: {str(e)}")
 
     await bot.answer_callback_query(callback_query.id, text=texts.SUCCESS_RIDE, show_alert=True)
-
+    await bot.send_message(
+            chat_id=user_id,
+            text=texts.DID_ACCEPT,
+            reply_markup=buttons.DID_ACCEPT
+        )
 
 
 @dp.callback_query_handler(lambda callback_query: callback_query.data and callback_query.data.startswith("success_"), state="*")

@@ -23,6 +23,7 @@ async def passerger_count_task(message: Message, state: FSMContext):
     locations = Location.objects.all()
     
     location_buttons = [[KeyboardButton(location.name)] for location in locations] 
+    location_buttons.append([KeyboardButton(buttons.BACK)])
 
     location_button = ReplyKeyboardMarkup(
         keyboard=location_buttons,

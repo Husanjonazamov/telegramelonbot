@@ -28,18 +28,14 @@ BACK = '⬅️ Ortga'
 
 MAIN_BACK = ReplyKeyboardMarkup(
     keyboard=[
-       KeyboardButton(text=BACK) 
+       [KeyboardButton(text=BACK)]
     ],
     resize_keyboard=True
 )
 
 
 
-
-
-
 BASE_BACK = '🔙 Ortga'
-
 
 
 BACK_BUTTON = ReplyKeyboardMarkup(
@@ -222,3 +218,21 @@ def location(location_button):
         ]        
     )    
     
+    
+    
+YES = '✅ Ha'
+NO = '❌ Yoq'
+    
+    
+DID_ACCEPT = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+           KeyboardButton(text=YES),
+           KeyboardButton(text=NO), 
+        ],
+        [
+            KeyboardButton(text=BACK)
+        ]
+    ],
+    resize_keyboard=True
+)

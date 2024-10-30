@@ -225,3 +225,20 @@ def text_to_send_cancel(**kwargs):
     
     
     return group_mail_send
+
+
+
+
+
+DID_ACCEPT = \
+"""
+Shofir bilan kelisha oldingizmi?\n
+Kelisha olmagan bo'lsangiz <b>❌ Yoq</b> tugmasini bosing.
+Arizangiz qaytadan tashlab beriladi
+"""
+
+
+DID_SUCCESS = \
+"""
+Safaringiz bexatar bo'lsin!
+"""
